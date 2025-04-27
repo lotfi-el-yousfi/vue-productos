@@ -76,7 +76,7 @@ function authenticate(req, res, next) {
 }
 
 // Login route
-app.post('auth/login', (req, res) => {
+app.post('/auth/login', (req, res) => {
     const {username, password} = req.body;
     const user = users.find(u => u.username === username && u.password === password);
 
@@ -90,7 +90,7 @@ app.post('auth/login', (req, res) => {
 });
 
 // Register route
-app.post('auth/register', (req, res) => {
+app.post('/auth/register', (req, res) => {
     const {username, password} = req.body;
     if (!username || !password) {
         return res.status(400).json({message: 'Username and password are required'});
@@ -113,7 +113,7 @@ app.post('auth/register', (req, res) => {
 });
 
 // Logout
-app.post('auth/logout', authenticate, (req, res) => {
+app.post('/auth/logout', authenticate, (req, res) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader.split(' ')[1];
     tokens.delete(token);
