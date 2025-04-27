@@ -1,6 +1,7 @@
 import {ref} from "vue";
 import {defineStore} from "pinia";
-import {login} from '@/domain/auth/service/ressources/authService'
+import {login, register} from '@/domain/auth/service/ressources/authService'
+
 
 export const useAuthStore = defineStore('AuthStore', () => {
 
@@ -24,13 +25,24 @@ export const useAuthStore = defineStore('AuthStore', () => {
         }
         isLoading.value = false
     }
+    const dispatch_register = async (username: string, password: string) => {
+        isLoading.value = true
+        error.value = null
+        try {
+            token.value = await register(username, password)
+        } catch (err) {
+            error.value = err
+        }
+        isLoading.value = false
+    }
     return {
         token,
 
         isLoading,
         error,
         //add your functions here
-        dispatch_login
+        dispatch_login,
+        dispatch_register
     };
 }, {persist: true});
 // 👇 This part is for Hot Module Replacement (in dev)
