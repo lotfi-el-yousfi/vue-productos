@@ -1,0 +1,495 @@
+<template name="99defineStore_pinia_sotre_2"
+          value="import { defineStore } from 'pinia'&#10;&#10;export const useTodoListStore = defineStore('todoList', {&#10;  state: () => ({&#10;    todoList: [],&#10;    id: 0,&#10;  }),&#10;  actions: {&#10;    addTodo(item) {&#10;      this.todoList.push({ item, id: this.id++, completed: false })&#10;    },&#10;    deleteTodo(itemId) {&#10;      this.todoList = this.todoList.filter((object) => {&#10;        return object.id !== itemId&#10;      })&#10;    },&#10;    toggleCompleted(idToFind) {&#10;      const todo = this.todoList.find((obj) => obj.id === idToFind)&#10;      if (todo) {&#10;        todo.completed = !todo.completed&#10;      }&#10;    },&#10;  },&#10;})"
+          toReformat="false"
+          toShortenFQNames="true">
+    <context>
+        <option name="HTML" value="true"/>
+        <option name="JAVA_SCRIPT" value="true"/>
+        <option name="TypeScript" value="true"/>
+        <option name="Vue" value="true"/>
+    </context>
+</template>
+<template name="99defineStore_PiniaStore_3"
+          value="import { defineStore } from 'pinia'; &#10;import { ref, computed } from 'vue'; &#10; &#10;export const use${1:StoreName} = defineStore('${1:storeName}', () =&gt; { &#10;  // State &#10;  const ${2:stateName} = ref(${3:null}); &#10; &#10;  // Getters &#10;  const ${4:getterName} = computed(() =&gt; ${5:${2:stateName}.value}); &#10; &#10;  // Actions &#10;  function ${6:actionName}(${7:payload}) { &#10;    ${2:stateName}.value = ${7:payload}; &#10;  } &#10; &#10;  return { &#10;    ${2:stateName}, &#10;    ${4:getterName}, &#10;    ${6:actionName} &#10;  }; &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99PiniaState"
+          value="  state: () =&gt; ({ &#10;    counter: 0, &#10;  }),"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99PiniaGetters"
+          value="  getters: { &#10;    doubleCounter(state) { &#10;      return state.counter * 2; &#10;    }, &#10;  },"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99PiniaActions"
+          value="  actions: { &#10;    ${1:func}() { &#10;      ${2:code} &#10;    }, &#10;  },"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99service_call"
+          value="export   ${call} = ( ${param}:${type}) =&gt; { &#10;  const url = `${url}`; &#10;  return axios.${protocole}<${retrun_type}[]>(url); &#10;}"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99TSFunction"
+          value="function ${functionName}(${variable}: ${type} ): ${returnType} { &#10;  return ${returnValue}; &#10;}"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99TSInterfaces"
+          value="export interface ${InterfaceName} { &#10;  ${key}: ${value}; &#10;}"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99TSGenerics"
+          value="function identity<T>(arg: T): T { &#10;  return arg; &#10;}"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99TSEnums"
+          value="enum Color { &#10;  Red, &#10;  Green, &#10;  Blue, &#10;}"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99TSTypeAliases"
+          value="type Point = { x: number; y: number }; &#10;const point: Point = { x: 10, y: 20 };"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99TSTuples"
+          value="let tuple: [string, number] = ['Alice', 30];"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99TSTypeGuards"
+          value="function printValue(value: string | number) { &#10;  if (typeof value === 'string') { &#10;    console.log(`String: ${value}`); &#10;  } else { &#10;    console.log(`Number: ${value}`); &#10;  } &#10;}"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99vue3"
+          value="<script setup lang=ts> &#10;import { onMounted, ref } from 'vue'; &#10;import { use${1:StoreName}Store } from '@/stores/${1:storeName}'; &#10; &#10;const props = defineProps<{ &#10;  ${2:propName}: ${3:String} &#10;}>(); &#10; &#10;const emit = defineEmits<{ &#10;  (e: '${4:eventName}', payload: ${5:any}): void &#10;}>(); &#10; &#10;const ${6:localRef} = ref(${7:null}); &#10; &#10;const store = use${1:StoreName}Store(); &#10; &#10;onMounted(() =&gt; { &#10;  console.log('mounted'); &#10;}); &#10; &#10;function ${8:callStoreAction}() { &#10;  store.${9:storeAction}(${10:arguments}); &#10;} &#10; &#10;</script>"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="router_push"
+          value="import { useRouter } from 'vue-router'; &#10; &#10;const router = useRouter(); &#10; router.push({ name: '${2:RouteName}' }); "
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="route_params"
+          value="import {  useRoute } from 'vue-router'; &#10;const route = useRoute(); &#10;  const ${3:paramValue} = route.params.${4:paramName}; "
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99vueDefineProps"
+          value=" const props = defineProps({ &#10;modalValue: { &#10;type: String, &#10;required: true, &#10;}, &#10;propValue: { &#10;type: String, &#10;required: true, &#10;}, &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99vueDefineEmits"
+          value="// Define Emits &#10;const emit = defineEmits();"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99vueReactive"
+          value="// Reactive &#10;const data = reactive({ &#10;  prop1: 'Hello', &#10;  prop2: 42, &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99VueComputed"
+          value="// Computed properties &#10;const $1 = computed(() =&gt; $2);"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99VueMethods"
+          value="// Methods &#10;function greet() { &#10;  console.log(`Hello, ${name.value}!`); &#10;}"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99VueLifecycle"
+          value="// Lifecycle hooks &#10;onMounted(() =&gt; { &#10;  console.log('Component mounted'); &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99VueRefs"
+          value="// Refs &#10;const myRef = ref(null);"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99VueWatch"
+          value="// Watchers &#10;watch(name, (newVal, oldVal) =&gt; { &#10;  console.log(`Name changed from ${oldVal} to ${newVal}`); &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99vuemodelvalue"
+          value="const { modelValue } = defineProps(['modelValue']); &#10;const emit = defineEmits(); &#10; &#10;const internalValue =  ref(modelValue); &#10; &#10;  emit('update:modelValue', internalValue.value);"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99vue3_setup_ts"
+          value="<template> &#10;  <h1>${2:placeholder}</h1> &#10;</template> &#10;<script setup lang=ts${1:delete}> &#10;</script> &#10;"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="jest_complet_ts"
+          value="import { mount, VueWrapper } from '@vue/test-utils'; &#10;import ${1:ComponentName} from '@/components/${1:ComponentName}.vue'; &#10;import { ${2:PropType} } from '@/types/${2:PropType}'; &#10;import { ${3:StateType} } from '@/store/types'; // Example import for state type &#10; &#10;describe('<${1:ComponentName} />', () =&gt; { &#10;  let wrapper: VueWrapper<any>; &#10;  const propsData = { &#10;    ${4:propName}: '${5:propValue}' as ${2:PropType}, &#10;    // Add more props as needed &#10;  }; &#10;  const stubs = { &#10;    ${6:ChildComponent}: true, &#10;    // Add more stubs as needed &#10;  }; &#10;  const mocks = { &#10;    $route: { &#10;      params: { &#10;        ${7:paramName}: '${8:paramValue}', &#10;        // Add more route params as needed &#10;      }, &#10;    }, &#10;    $router: { &#10;      push: jest.fn(), &#10;    }, &#10;    $store: { &#10;      state: { &#10;        ${9:moduleName}: { &#10;          ${10:stateProp}: '${11:stateValue}' as ${3:StateType}['${9:moduleName}']['${10:stateProp}'], &#10;          // Add more state properties as needed &#10;        }, &#10;      }, &#10;      getters: { &#10;        '${12:moduleName}/${13:getterName}': (state: ${3:StateType}) =&gt; state.${9:moduleName}.${10:stateProp}, &#10;        // Add more getters as needed &#10;      }, &#10;      dispatch: jest.fn(), &#10;      commit: jest.fn(), &#10;    }, &#10;    $t: jest.fn((key: string) =&gt; key), // Mock for i18n &#10;    // Add more mocks as needed &#10;  }; &#10;  const provide = { &#10;    ${14:injectionKey}: '${15:injectionValue}', &#10;    // Add more provide values as needed &#10;  }; &#10; &#10;  beforeEach(() =&gt; { &#10;    wrapper = mount(${1:ComponentName}, { &#10;      propsData, &#10;      stubs, &#10;      mocks, &#10;      global: { &#10;        mocks, &#10;        provide, &#10;      }, &#10;    }); &#10;  }); &#10; &#10;  afterEach(() =&gt; { &#10;    wrapper.unmount(); &#10;  }); &#10; &#10;  it('renders the component', () =&gt; { &#10;    expect(wrapper.exists()).toBe(true); &#10;  }); &#10; &#10;}); &#10;"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99JESTTest"
+          value="it('$1', () =&gt; { &#10;    const wrapper = mount(MyComponent); &#10;  const element = wrapper.find('$2'); &#10;  expect(element.exists()).toBe(true); &#10;  expect(element.text()).toBe('$3'); &#10;  expect(element.attributes('$4')).toBe('$5'); &#10;  element.trigger('click'); &#10; });"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99JestServiceTest"
+          value="it('should ${testTitle}', async () =&gt; { &#10; &#10;jest.spyOn(${RequestClass}, '${Protocol}').mockReturnValue(Promise.resolve(${ResolveValue})); &#10; &#10;const ApiCallResult = await ${TestedServiceFunciton}(); &#10; &#10;expect(${RequestClass}.${Protocol}).toHaveBeenCalledWith('/api/${APIPath}'); &#10; &#10;expect(ApiCallResult).toEqual(${ExcpectedResult}); &#10; &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99JestInputValue"
+          value="await wrapper.find('input[id=${id}]').setValue('${value}');"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99JestIt"
+          value=" it('should ${description}', async () =&gt; { &#10;${code} &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99JestFind"
+          value="//input[id='name'] &#10;const ${variable} = wrapper.find('${selector}');"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99JestTrigger"
+          value="await wrapper.find('${selector}').trigger('${event}'); &#10;await wrapper.vm.$nextTick();"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99JestClick"
+          value="const ${BUTTON_NAME} = wrapper.findAll('${selector}'); &#10;await ${BUTTON_NAME}.trigger('click'); &#10;await wrapper.vm.$nextTick();"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99JestExpectText"
+          value="const ${BUTTON_NAME} = wrapper.find('${selector}'); &#10;expect(${BUTTON_NAME}.text()).toContain('${text}');"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99JestExpectAttribut"
+          value="const ${BUTTON_NAME} = wrapper.find('${selector}'); &#10;expect(${BUTTON_NAME}.attributes('${prop}')).toBe('${value}');"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99JestPiniaStore"
+          value="import { setActivePinia, createPinia } from 'pinia'; &#10;import { ${1:useMyStore} } from './${2:myStore}'; &#10; &#10;// Test for store state mutation &#10;test('${3:should update state with mutation}', () =&gt; { &#10;  // Arrange: Set up Pinia and create a store instance &#10;  setActivePinia(createPinia()); &#10;  const store = ${1:useMyStore}(); &#10; &#10;  // Act: Update the store state &#10;  store.${4:setData}('new value'); &#10; &#10;  // Assert: Verify that the state has been updated &#10;  expect(store.${5:state}.data).toBe('new value'); &#10;}); &#10; &#10;// Test for actions &#10;test('${6:should call API and update state}', async () =&gt; { &#10;  // Arrange: Set up Pinia and create a store instance &#10;  setActivePinia(createPinia()); &#10;  const store = ${1:useMyStore}(); &#10;  const data = { key: 'value' }; &#10;  jest.spyOn(store, '${7:fetchData}').mockResolvedValue(data); &#10; &#10;  // Act: Call an action &#10;  await store.${7:fetchData}(); &#10; &#10;  // Assert: Verify that the state has been updated &#10;  expect(store.${5:state}.data).toEqual(data); &#10;}); &#10; &#10;// Test for getters &#10;test('${8:should compute value with getter}', () =&gt; { &#10;  // Arrange: Set up Pinia and create a store instance &#10;  setActivePinia(createPinia()); &#10;  const store = ${1:useMyStore}(); &#10; &#10;  // Act: Access a getter &#10;  const result = store.${9:getComputedValue}; &#10; &#10;  // Assert: Verify the computed value &#10;  expect(result).toBe(${10:expectedValue}); &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99jest-render-structure"
+          value="it('should render without errors and match snapshot', () =&gt; { &#10;  const wrapper = shallowMount(ComponentToTest); &#10;  expect(wrapper.exists()).toBe(true); &#10;  expect(wrapper.html()).toMatchSnapshot(); &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99jest-data-props"
+          value="it('should display data and props correctly', () =&gt; { &#10;  const testData = '${1:TestValue}'; &#10;  const wrapper = shallowMount(ComponentToTest, { &#10;    propsData: { &#10;      prop1: testData, &#10;      prop2: ${2:AnotherValue} &#10;    }, &#10;    data() { &#10;      return { &#10;        data1: testData, &#10;        data2: ${3:AnotherData} &#10;      }; &#10;    } &#10;  }); &#10;  expect(wrapper.text()).toContain(testData); &#10;  expect(wrapper.props().prop1).toBe(testData); &#10;  // Add more assertions as needed &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99jest-computed-methods"
+          value="it('should test computed properties and methods', () =&gt; { &#10;  const wrapper = shallowMount(ComponentToTest); &#10;  const computedValue =  wrapper.vm.${1:computedPropertyName}; &#10;  // Add assertions for computedValue and method calls &#10;   expect(computedValue).toBe(${2:expectedValue}); &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99jest-event-handling"
+          value="it('should test event handling', () =&gt; { &#10;  const wrapper = shallowMount(ComponentToTest); &#10;  // Trigger events and assert component's response &#10;  wrapper.vm.$emit('${1:eventName}', ${2:eventData}); &#10;  // Add assertions for the component's response &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99jest-lifecycle-conditional"
+          value="it('should test lifecycle hooks and conditional rendering', () =&gt; { &#10;  const wrapper = shallowMount(ComponentToTest); &#10;  // Test lifecycle hooks and conditional rendering &#10;   expect(wrapper.find('${1:elementSelector}').exists()).toBe(true); &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99jest-vuex-directives"
+          value="it('should test Vuex integration and custom directives', () =&gt; { &#10;  const wrapper = shallowMount(ComponentToTest, { &#10;    // Add Vuex store and custom directives if applicable &#10;  }); &#10;  // Test Vuex interactions and custom directives &#10;   expect(wrapper.vm.$store.state.${1:storeProperty}).toBe(${2:expectedValue}); &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99jest-form-router"
+          value="it('should test form handling and router integration', () =&gt; { &#10;  const wrapper = shallowMount(ComponentToTest, { &#10;    // Add form inputs and router if applicable &#10;  }); &#10;  // Test form handling and router integration &#10;   wrapper.find('${1:formInputSelector}').setValue('${2:inputValue}'); &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
+<template name="99jest-api-async"
+          value="it('should test API requests and asynchronous operations', async () =&gt; { &#10;  // Mock API requests and test async behavior &#10;  const wrapper = shallowMount(ComponentToTest); &#10;  await wrapper.vm.$nextTick(); &#10;  // Assertions for async operations &#10;  expect(wrapper.find('${1:elementSelector}').exists()).toBe(true); &#10;});"
+          toReformat="false"
+          toShortenFQNames="true">
+<context>
+    <option name="HTML" value="true"/>
+    <option name="JAVA_SCRIPT" value="true"/>
+    <option name="TypeScript" value="true"/>
+    <option name="Vue" value="true"/>
+</context>
+</template>
